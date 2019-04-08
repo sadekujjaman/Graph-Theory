@@ -7,7 +7,8 @@ import java.util.Scanner;
 
 /**
  *
- * @author Saju
+ * @author Sadekujjaman Saju
+ * 
  */
 public class GraphColoring {
     
