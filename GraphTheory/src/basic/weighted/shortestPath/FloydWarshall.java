@@ -24,6 +24,8 @@ public class FloydWarshall {
 3 2 3
 4 1 4
 4 3 1
+
+
 	 
 */
 	
@@ -77,7 +79,8 @@ public class FloydWarshall {
 		for(int k = 1; k <= vertices; k++){
 			for(int i = 1; i <= vertices; i++){
 				for(int j = 1; j <= vertices; j++){
-					Q[i][j] = Math.min(Q[i][j], Q[i][k] + Q[k][j]);
+//					Q[i][j] = Math.min(Q[i][j], Q[i][k] + Q[k][j]);
+					Q[i][j] = Math.min(Q[i][j], Math.max(Q[i][k], Q[k][j]));
 				}
 			}
 //			System.out.println("Q " + k);

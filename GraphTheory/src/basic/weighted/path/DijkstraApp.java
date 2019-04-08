@@ -74,15 +74,13 @@ public class DijkstraApp {
 				
 				if((dis[u] + t.w) < dis[t.v]){
 					dis[t.v] = dis[u] + t.w;
-					
-				    visited[t.v] = true;
+				     visited[t.v] = true;
 				    queue.add(new Node(t.v, t.w));
 					prev[t.v] = u;
 				}
 			}
 			
 		}
-		
 		if(!visited[n])
 			System.out.println("-1");
 		else{
