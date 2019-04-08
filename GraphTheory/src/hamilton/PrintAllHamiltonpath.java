@@ -25,14 +25,14 @@ public class PrintAllHamiltonpath {
 		boolean[] visited = new boolean[nodes + 1];
 		path.add(start);
 		visited[start] = true;
-		printAllPath(nodes, g, start, visited, path);
+		printAllPath(g, start, visited, path);
 				
 		sc.close();
 	}
 
 	
-	private static void printAllPath(int nodes, Graph g, int start, boolean[] visited, List<Integer> path) {
-		if(path.size() == nodes){
+	private static void printAllPath( Graph g, int start, boolean[] visited, List<Integer> path) {
+		if(path.size() == g.nodes){
 			for(Integer e : path){
 				System.out.print(e + " ");
 			}
@@ -45,7 +45,7 @@ public class PrintAllHamiltonpath {
 				visited[v] = true;
 				path.add(v);
 				
-				printAllPath(nodes, g, start, visited, path);
+				printAllPath(g, start, visited, path);
 				
 				visited[v] = false;
 				path.remove(path.size() - 1);
