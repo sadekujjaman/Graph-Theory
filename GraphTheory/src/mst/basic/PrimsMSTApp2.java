@@ -4,9 +4,6 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-/**
- * Created by aishwat on 17/8/16.
- */
 public class PrimsMSTApp2 {
      private class Node implements Comparable<Node> {
         int vertice, key;
